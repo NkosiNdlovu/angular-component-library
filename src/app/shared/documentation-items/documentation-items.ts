@@ -31,6 +31,8 @@ const DOCS: { [key: string]: DocCategory[] } = {
         { id: 'autocomplete', name: 'Autocomplete', examples: ['autocomplete'] },
         { id: 'multiselect', name: 'Multiselect dropdown', examples: ['multiselect'] },
         { id: 'layout', name: 'Layout', examples: ['layout'] },
+        { id: 'sidenav', name: 'Sidenav content', examples: ['sidenavcontent'] },
+        { id: 'navbar', name: 'Navbar content', examples: ['navbarcontent'] },
         { id: 'groupbutton', name: 'Group button', examples: ['groupbutton'] },
         {
           id: 'datepicker',
