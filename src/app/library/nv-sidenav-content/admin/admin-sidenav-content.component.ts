@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   templateUrl: 'admin-sidenav-content.component.html',
   styleUrls: ['admin-sidenav-content.component.scss']
 })
-export class AdminSidenavContentComponent implements OnInit, OnDestroy {
+export class NvAdminSidenavContentComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
     

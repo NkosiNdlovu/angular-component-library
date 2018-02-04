@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 
 import { NvCoreModule } from '../../core/core.module';
-import { BasicNavbarContentComponent } from './nv-basic-navbar-content.component';
+import { NvBasicNavbarContentComponent } from './nv-basic-navbar-content.component';
 
 @NgModule({
   imports:[
@@ -18,10 +18,10 @@ import { BasicNavbarContentComponent } from './nv-basic-navbar-content.component
     NvCoreModule,
     FlexLayoutModule
    ],
-  exports: [ BasicNavbarContentComponent ],
+  exports: [ NvBasicNavbarContentComponent ],
   declarations: [
-    BasicNavbarContentComponent,
+    NvBasicNavbarContentComponent,
    ],
   providers:    [  ]
 })
-export class NvAdminLayoutComponentModule { }
+export class NvBasicNavbarContentModule { }

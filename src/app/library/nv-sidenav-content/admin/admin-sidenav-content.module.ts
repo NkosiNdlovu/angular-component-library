@@ -14,7 +14,7 @@ import {
 } from '@angular/material';
 
 import { NvCoreModule } from "../../core/core.module";
-import { AdminSidenavContentComponent } from "./admin-sidenav-content.component";
+import { NvAdminSidenavContentComponent } from "./admin-sidenav-content.component";
 
 @NgModule({
   imports:[
@@ -27,10 +27,10 @@ import { AdminSidenavContentComponent } from "./admin-sidenav-content.component"
     NvCoreModule,
     FlexLayoutModule
    ],
-  exports: [ AdminSidenavContentComponent ],
+  exports: [ NvAdminSidenavContentComponent ],
   declarations: [
-    AdminSidenavContentComponent,
+    NvAdminSidenavContentComponent,
    ],
   providers:    [  ]
 })
-export class NvAdminLayoutComponentModule { }
+export class NvAdminSidenavContentModule { }

@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   templateUrl: 'basic-navbar-content.component.html',
   styleUrls: ['basic-navbar-content.component.scss']
 })
-export class BasicNavbarContentComponent implements OnInit, OnDestroy {
+export class NvBasicNavbarContentComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
     

@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NvLayoutExamplesComponent } from './nv-layout-examples.component';
-import { NvCoreModule } from '../../library/core/core.module';
-import { NvAdminLayoutComponentModule } from '../../library/layout/admin/admin-layout.module';
 import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { NvCoreModule } from '../../library/core/core.module';
+import { NvSidenavExamplesComponent } from './nv-sidenav-content-examples.component';
+import { NvAdminSidenavContentModule } from '../../library/nv-sidenav-content/admin/admin-sidenav-content.module';
 
 @NgModule({
   imports: [
     CommonModule,
     NvCoreModule,
-    NvAdminLayoutComponentModule,
+    NvAdminSidenavContentModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule
   ],
-  exports:[NvLayoutExamplesComponent],
-  declarations: [NvLayoutExamplesComponent]
+  exports:[NvSidenavExamplesComponent],
+  declarations: [NvSidenavExamplesComponent]
 })
 export class NvLayoutExamplesModule { }
