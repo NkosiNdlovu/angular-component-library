@@ -1,0 +1,26 @@
+<mat-form-field style="width:350px;">
+  <mat-select placeholder="{{selectAllItemText}}" style="width: 100%">
+      <mat-option selected value="gan" style="display:none">
+      </mat-option>
+      <div style="padding:12px;">
+          <form>
+              <mat-form-field style="width:200px">
+                  <input matInput placeholder="Search" [value]="searchItem" (input)="searchItem = $event.target.value">
+              </mat-form-field>
+              <button mat-icon-button (click)="searchItem=''" matTooltip="Clear search string">
+                  <mat-icon class="md-24">close</mat-icon>
+              </button>
+              <div style="clear: both;"></div>
+              <button mat-icon-button (click)="selectAllItems(false)">
+                  <mat-icon class="md-24" aria-hidden="true">clear</mat-icon>
+                  Clear all selections
+              </button>
+          </form>
+          <p>
+          </p>
+          <p *ngFor="let item of items  | filter: title: searchItem">
+              <mat-checkbox (change)="updateselectAllItemsText()" [(ngModel)]="item.selected">{{item.title}}</mat-checkbox>
+          </p>
+      </div>
+  </mat-select>
+</mat-form-field>

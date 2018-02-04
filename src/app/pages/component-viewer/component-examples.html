@@ -1,0 +1,119 @@
+<span class="cdk-visually-hidden" tabindex="-1" #intialFocusTarget>
+  Examples for {{componentViewer.componentDocItem.id}}
+</span>
+
+<nv-multiselect-dropdown-example *ngIf="componentViewer.componentDocItem.id == 'multiselect'">
+
+</nv-multiselect-dropdown-example>
+
+<nv-autocomplete-examples *ngIf="componentViewer.componentDocItem.id == 'autocomplete'">
+
+</nv-autocomplete-examples>
+
+<nv-layout-examples *ngIf="componentViewer.componentDocItem.id == 'layout'">
+
+</nv-layout-examples>
+
+
+<div *ngIf="componentViewer.componentDocItem.id == 'tabs'">
+  <h3>Example 1</h3>
+  <mat-tab-group>
+    <mat-tab label="Tab 1" style="padding-top:16px">
+      <p></p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also Sherine the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </mat-tab>
+    <mat-tab label="Tab 2" style="padding-top:16px">
+      <p></p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mat-tab>
+  </mat-tab-group>
+
+  <h3 style="margin-top: 54px;">Example 2</h3>
+  <mat-tab-group class="teal-tabs">
+    <mat-tab label="Tab 1">
+      <p></p>
+      Lorem Ipsum is simply dummy Sherine text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </mat-tab>
+    <mat-tab label="Tab 2">
+        <p></p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+
+<div *ngIf="componentViewer.componentDocItem.id == 'groupbutton'">
+
+  <h3>Material button group</h3>
+  <div style="margin-bottom: 54px;">
+    <label class="" style="width:200px;margin-right:16px; ">
+      Gender
+    </label>
+
+    <mat-button-toggle-group formControlName="isPAYG">
+
+      <mat-button-toggle [value]="true" [checked]="true">
+        Male
+      </mat-button-toggle>
+      <mat-button-toggle [value]="false">
+        Female
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <p></p>
+  <h3>Styled button group 1</h3>
+  <div class="toggle-small " style="margin-bottom: 54px;">
+
+    <mat-button-toggle-group formControlName="isPAYG">
+      <mat-button-toggle [value]="true" [disabled]="true">
+        Gender
+      </mat-button-toggle>
+      <mat-button-toggle [value]="true">
+        Male
+      </mat-button-toggle>
+      <mat-button-toggle [value]="false" [checked]="true">
+        Female
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <p></p>
+  <h3>Styled button group 2</h3>
+  <div class="toggle-big" style="margin-bottom: 54px;">
+    <label class="" style="width:200px;margin-right:16px; ">
+      Gender
+    </label>
+
+    <mat-button-toggle-group formControlName="isPAYG">
+
+      <mat-button-toggle [value]="true" [checked]="true">
+        Male
+      </mat-button-toggle>
+      <mat-button-toggle [value]="false">
+        Female
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
+
+
+
+<!-- 
+<example-viewer
+  *ngFor="let example of componentViewer.componentDocItem.examples"
+  [example]="example"></example-viewer> -->
+  

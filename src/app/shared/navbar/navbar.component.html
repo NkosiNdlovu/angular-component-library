@@ -1,0 +1,29 @@
+<!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
+<nav class="docs-navbar-header">
+  <div >
+    <img src="../../../assets/img/LogoWhite-2.png" style="height: 47px;" alt="logo">
+  </div>
+
+  <a mat-button class="docs-button" routerLink="/" aria-label="nVisionIT">
+
+    <span>nVisionIT Angular component library</span>
+  </a>
+  <a mat-button class="docs-navbar-hide-small docs-button" [routerLink]="'components'">Components</a>
+  
+  <div class="flex-spacer"></div>
+
+  <theme-picker></theme-picker>
+  <!-- <a mat-button class="docs-button docs-navbar-hide-small" href="https://github.com/angular/material2"
+       aria-label="GitHub Repository">
+      
+      GitHub
+    </a> -->
+  <!-- <a mat-icon-button class="docs-button docs-navbar-show-small"
+       href="https://github.com/angular/material2" aria-label="GitHub Repository">
+      
+    </a> -->
+</nav>
+<nav class="docs-navbar docs-navbar-show-small">
+  <a mat-button class="docs-navbar-link" *ngFor="let key of sectionKeys" [routerLink]="key">{{sections[key]}}</a>
+  <a mat-button class="docs-navbar-link" routerLink="guides">Guides</a>
+</nav>

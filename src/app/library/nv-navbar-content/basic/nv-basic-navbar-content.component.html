@@ -1,0 +1,41 @@
+<div fxLayout="column" class="content" style="height:500px;margin:0px 0 0 0;padding:0;background-color:aqua; flex-flow: column;">
+
+  <div class="router-component" #routerComponent fxLayout="column" fxFlex>
+    <mat-toolbar color="primary" class="nv-toolbar mat-elevation-z2" style="z-index:4">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div fxFlex>
+        <ng-content select=".nv-navbar-content">
+          <!-- to nav content goes here -->
+        </ng-content>
+      </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container fxFlex>
+      <mat-sidenav #sidenav class="nv-sidenav mat-elevation-z1" mode="side" align="begin" opened style="width:250px;">
+        <div style="height:100%">
+          <ng-content select=".nv-sidebar-content">
+            <!-- side nav content goes here -->
+          </ng-content>
+        </div>
+      </mat-sidenav>
+
+      <div class="nv-app-content" fxFlex fxFlexFill fxLayout="column">
+        <div fxFlex="85%">
+          <ng-content select=".nv-app-content" fxFlexFill fxFlex>
+            <!-- page content goes here -->
+
+          </ng-content>
+        </div>
+
+        <mat-toolbar color="primary" class="nv-toolbar mat-elevation-z1">
+          <ng-content select=".nv-footer">
+            <!-- page footer goes here -->
+
+          </ng-content>
+        </mat-toolbar>
+      </div>
+    </mat-sidenav-container>
+  </div>
+</div>

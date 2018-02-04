@@ -1,0 +1,210 @@
+@import '../../../sass/constants';
+
+app-component-viewer {
+  font-weight: 400;
+  padding: 20px $content-padding-side 50px;
+
+  @media ($mat-xsmall) {
+    padding-left: $content-padding-side-xs;
+    padding-right: $content-padding-side-xs;
+  }
+}
+
+.docs-component-viewer {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.docs-component-viewer-section-tab {
+  text-transform: uppercase;
+}
+
+.docs-component-viewer-tabbed-content {
+  margin-bottom: 50px;
+}
+
+.docs-component-viewer-content {
+  position: relative;
+  min-height: 500px;
+
+  // Display outlet components with toc as flex and switch to
+  // vertical direction on small screens
+  component-overview, component-api {
+    display: flex;
+    align-items: flex-start;
+
+    @media (max-width: $small-breakpoint-width) {
+      flex-direction: column;
+    }
+  }
+
+  table-of-contents {
+    top: 35px;
+    position: sticky;
+
+    // Reposition on top of content on small screens and remove
+    // sticky positioning
+    @media (max-width: $small-breakpoint-width) {
+      order: -1;
+      position: inherit;
+      width: auto;
+      padding-left: 0;
+    }
+  }
+}
+
+.docs-component-view-text-content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.docs-component-api,
+.docs-component-overview {
+  width: 80%;
+
+  @media (max-width: $small-breakpoint-width) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+
+
+.toggle-big{
+ 
+  .toggle-no-radius {
+    mat-button-toggle-group {
+      border-radius: 0 !important;
+    }
+    mat-button-toggle:nth-child(1) {
+      border-radius: 0px 0 0 0px !important;
+    }
+    mat-button-toggle:last-child {
+      border-radius: 0 0px 0px 0 !important;
+    }
+    
+  }
+
+  .mat-button-toggle-group {
+    border-radius: 10px 10px 10px 10px !important;
+  }
+  .mat-button-toggle {
+    color: #FF8200 !important;
+    border-color: #FF8200 !important;
+    border-width: 2px;
+    border-style: solid;
+  }
+  .mat-button-toggle.mat-button-toggle-checked {
+    color:#fff !important;
+    background-color: #FF8200 !important;
+
+  }
+  mat-button-toggle-group mat-button-toggle:nth-child(1) {
+    border-radius: 10px 0 0 10px !important;
+  }
+  mat-button-toggle-group mat-button-toggle:last-child {
+    border-radius: 0 10px 10px 0 !important;
+  }
+
+  .custom-multi-select-with-search-not-empty {
+    .mat-input-placeholder.mat-form-field-placeholder.mat-empty.mat-form-field-empty {
+        color: #FF8200 !important;
+    }
+  }
+  .custom-multi-select-with-search-empty {
+    .mat-input-placeholder.mat-form-field-placeholder.mat-empty.mat-form-field-empty {
+        //color: #0000008a !important;
+    }
+  }
+
+
+}
+
+
+.toggle-small {
+  .mat-button-toggle {
+    border: #71C5E8 1px solid !important;
+  }
+  .mat-button-toggle label {
+    font-size: 14px
+  }
+  
+  .mat-button-toggle.mat-button-toggle-checked {
+    background-color: #71C5E8 !important;
+    .mat-button-toggle-label-content {
+      color: white;
+    }
+  }
+  .mat-button-toggle-label-content {
+    color: #71C5E8;
+  }
+  .mat-button-toggle-group {
+    height: 34px;
+    border-radius: 0% !important;
+  }
+  mat-button-toggle-group mat-button-toggle:nth-child(1) {
+    border-radius: 0% !important;
+    background-color: white;
+    .mat-button-toggle-label-content {
+      color: #007491;
+    }
+    .mat-button-toggle-label-content  {
+      padding-right:40px !important;
+    }
+    
+  }
+  mat-button-toggle-group mat-button-toggle:last-child {
+    border-radius: 0% !important ;
+}
+}
+
+
+
+.teal-tabs {
+
+  .mat-tab-label.mat-ripple.mat-tab-label-active {
+  
+    span{
+      color: white !important;
+    }
+  
+    .tab-label-wip {
+      color: white !important;
+    }
+  }
+
+  .mat-tab-label.mat-ripple.mat-tab-label-active .tab-label-wip {
+    color: white !important;
+    z-index:1;
+    
+  }
+  .mat-ink-bar {
+    height:100%
+  }
+  
+  .mat-tab-labels {
+    border: 2px solid #2bc6da !important;
+  }
+
+  .mat-tab-label {
+    width: 100%;
+    z-index: 1;
+    color: #2bc6da;
+    opacity: 1;
+  }
+
+  .mat-tab-label.mat-tab-label-active {
+    color:white;
+    opacity: 1;
+  }
+
+.mat-double-tab-level {
+  .mat-tab-label {
+    width: 50%;
+  }
+}
+  .mat-tab-header {
+    border-bottom: 0px;
+  }
+  
+}
