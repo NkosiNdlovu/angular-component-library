@@ -3,8 +3,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'nv-basic-navbar-content',
-  templateUrl: 'basic-navbar-content.component.html',
-  styleUrls: ['basic-navbar-content.component.scss']
+  templateUrl: 'nv-basic-navbar-content.component.html',
+  styleUrls: ['nv-basic-navbar-content.component.scss']
 })
 export class NvBasicNavbarContentComponent implements OnInit, OnDestroy {
   

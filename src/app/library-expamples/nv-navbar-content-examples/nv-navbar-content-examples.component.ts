@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nv-layout-examples',
-  templateUrl: './nv-layout-examples.component.html',
-  styleUrls: ['./nv-layout-examples.component.scss']
+  selector: 'nv-navbar-content-examples',
+  templateUrl: './nv-navbar-content-examples.component.html',
+  styleUrls: ['./nv-navbar-content-examples.component.scss']
 })
 export class NvNavbarContentExamplesComponent implements OnInit {
 

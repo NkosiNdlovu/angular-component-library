@@ -10,7 +10,6 @@ import {combineLatest} from 'rxjs/observable/combineLatest';
 import {map} from 'rxjs/operators/map';
 import { NvMultiselectDropdownExampleModule } from '../../library-expamples/nv-multiselect-dropdown/nv-multiselect-dropdown.module';
 import { NvAutocompleteExamplesModule } from '../../library-expamples/nv-autocomplete-examples/nv-autocomplete-examples.module';
-import { NvLayoutExamplesModule } from '../../library-expamples/nv-layout-examples/nv-layout-examples.module';
 
 @Component({
   selector: 'app-component-viewer',
@@ -89,8 +88,8 @@ export class ComponentExamples extends ComponentOverview {}
 
     //hard coded for the demo
     NvMultiselectDropdownExampleModule,
-    NvAutocompleteExamplesModule,
-    NvLayoutExamplesModule
+    NvAutocompleteExamplesModule
+    
   ],
   exports: [ComponentViewer],
   declarations: [ComponentViewer, ComponentOverview, ComponentApi, ComponentExamples],

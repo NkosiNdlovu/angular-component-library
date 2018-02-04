@@ -3,8 +3,7 @@ import {MatSnackBar} from '@angular/material';
 import {ComponentPortal} from '@angular/cdk/portal';
 
 //import {EXAMPLE_COMPONENTS, LiveExample} from '@angular/material-examples';
-//import {CopierService} from '../copier/copier.service';
-
+import {CopierService} from '../copier/copier.service';
 
 @Component({
   selector: 'example-viewer',
@@ -25,7 +24,7 @@ export class ExampleViewer {
 
     constructor(
       private snackbar: MatSnackBar,
-      //private copier: CopierService
+      private copier: CopierService
     ) { }
 
   get example() {
@@ -52,10 +51,10 @@ export class ExampleViewer {
   }
 
   copySource(text: string) {
-    // if (this.copier.copyText(text)) {
-    //   this.snackbar.open('Code copied', '', {duration: 2500});
-    // } else {
-    //   this.snackbar.open('Copy failed. Please try again!', '', {duration: 2500});
-    // }
+    if (this.copier.copyText(text)) {
+      this.snackbar.open('Code copied', '', {duration: 2500});
+    } else {
+      this.snackbar.open('Copy failed. Please try again!', '', {duration: 2500});
+    }
   }
 }
